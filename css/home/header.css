@@ -1,0 +1,245 @@
+/* link que leva para home
+    porém só é ativado quando
+    chega nos 800px no menu
+    mobile */
+.link-home {
+  display: none;
+}
+
+.header-home {
+  background: linear-gradient(
+    to right,
+    var(--background-3) 36%,
+    var(--background-4) 30%
+  );
+  padding-bottom: 7.5rem;
+}
+
+.header-home-content {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2.625rem;
+}
+
+.nav-itens {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-itens li a {
+  font-weight: bold;
+  padding: 0.8rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.nav-itens li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.125rem;
+  margin-top: 0.125rem;
+  background-color: var(--background-2);
+  transition: 0.4s;
+}
+
+.nav-itens li a:hover::after {
+  width: 100%;
+}
+
+#search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-button {
+  background-color: var(--background-1);
+  padding: 12.5px;
+  border: none;
+}
+
+.search-input input {
+  border: none;
+  padding: 0.75rem 0.5rem;
+  color: var(--color-2);
+  font-size: var(--size-2);
+  line-height: 1.16;
+  border: 0.125rem solid transparent;
+}
+
+.search-input input:focus {
+  outline: none;
+  border-color: var(--background-2);
+}
+
+/* ajustando o header primeiro
+   break point */
+@media (max-width: 79rem) {
+  .header-home-content {
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+  }
+
+  .header-img-bag {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  #search-form {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+}
+
+/* ajustando o header segundo
+   break point */
+@media (min-width: 52.5625rem) and (max-width: 63.75rem) {
+  .nav-itens li a {
+    font-size: var(--size-3);
+  }
+
+  .nav-itens {
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+/* estilos no menu mobile */
+@media (max-width: 52.5rem) {
+  .nav-itens li a:hover::after {
+    width: 0;
+  }
+
+  .header-home-content {
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+  }
+
+  #search-form {
+    grid-row: 1;
+  }
+
+  .link-home {
+    display: block;
+  }
+
+  .search-button {
+    background-color: var(--background-1);
+    padding: 7px;
+    border: none;
+  }
+
+  .search-input input {
+    border: none;
+    padding: 0.5rem;
+    color: var(--color-2);
+    font-size: 1rem;
+    line-height: 0;
+    border: 0.125rem solid transparent;
+  }
+
+  .header-home {
+    position: relative;
+    background: var(--background-4);
+  }
+
+  .header-img {
+    display: none;
+  }
+
+  .header-nav {
+    position: absolute;
+    z-index: 9999;
+    top: 2.1875rem;
+  }
+
+  .nav-itens {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-itens {
+    background-color: var(--background-5);
+    padding: 0 1rem;
+    border-radius: 0.3125rem;
+  }
+
+  .nav-itens li a {
+    color: var(--color-4);
+    font-weight: 500;
+    font-size: var(--size-2);
+  }
+
+  .menu-mobile-button {
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+
+  .menu-mobile-button::before {
+    content: "";
+    display: inline-block;
+    width: 2.375rem;
+    height: 0.25rem;
+    background-color: var(--background-2);
+    box-shadow: 0 0.625rem var(--background-2), 0 -10px var(--background-2);
+  }
+
+  /* estilos para o JavaScript do menu mobile */
+  [data-menu="list"] {
+    display: none;
+    transition: 0.3s;
+  }
+
+  @keyframes show-menu {
+    from {
+      opacity: 0;
+      transform: translate3d(-40px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  [data-menu="list"].active-menu {
+    display: flex;
+    animation: show-menu 0.4s forwards;
+  }
+
+  [data-menu="button"]::before {
+    transition: 0.4s;
+  }
+
+  [data-menu="button"].active-menu::before {
+    transform: rotate(90deg);
+  }
+}
+
+/* ajustes finais no input  */
+@media (max-width: 32.5rem) {
+  .header-home-content {
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+  }
+
+  #search-form {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .header-img-bag {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .search-input input {
+    width: 8.75rem;
+  }
+}

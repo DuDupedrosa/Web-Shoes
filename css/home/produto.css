@@ -1,0 +1,136 @@
+.produto {
+  background: linear-gradient(
+    to right,
+    var(--background-3) 36%,
+    var(--background-4) 30%
+  );
+  padding-bottom: 7.5rem;
+}
+
+.container-produto-content {
+  max-width: 22.5rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.produtos-imgs-ampliada {
+  margin-bottom: 2rem;
+}
+
+.produto-content h1 {
+  font-weight: bold;
+  line-height: 1.16;
+  margin-bottom: 1.25rem;
+}
+
+.produto-content p {
+  font-weight: bold;
+  line-height: 1.18;
+  margin-bottom: 1.25rem;
+}
+
+.produto-content span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1.875rem;
+}
+
+.produto-content a {
+  padding: 2.125rem 5rem;
+  background-color: var(--background-2);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.produto-box {
+  display: grid;
+  gap: 4.5rem;
+  grid-template-columns: 1fr 2fr;
+}
+
+.produtos-imgs {
+  display: grid;
+  justify-items: center;
+}
+
+.produtos-imgs-min-itens {
+  display: flex;
+  gap: 2rem;
+}
+
+.produtos-imgs-min-itens li {
+  cursor: pointer;
+}
+
+/* ajustando o tamanho do btn comprar
+ para não estourar o background */
+@media (max-width: 60.25rem) {
+  .produto-content a {
+    padding: 1.875rem 3.75rem;
+  }
+}
+
+/* estilos para o JavaScript */
+[data-photo="ampliada"] {
+  transition: 0.3s;
+  display: none;
+}
+
+@keyframes show-photo {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-0, 0, 0);
+  }
+}
+
+[data-photo="ampliada"].active-photo {
+  display: block;
+  animation: show-photo 0.6s forwards;
+}
+
+[data-photo="min"] {
+  border-bottom: 6px solid transparent;
+  transition: 0.3s;
+}
+
+[data-photo="min"].active-photo {
+  border-color: var(--background-2);
+}
+
+@media (max-width: 840px) {
+  .produto {
+    background: var(--background-4);
+  }
+
+  .produto-box {
+    grid-template-columns: 1fr;
+  }
+
+  .container-produto-content {
+    max-width: max-content;
+    margin: 0;
+  }
+
+  .produtos-imgs {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 32.5rem) {
+  .produto-content h1 {
+    font-size: var(--size-5);
+  }
+
+  .produto-content span {
+    font-size: var(--size-7);
+  }
+
+  .produto-content a {
+    padding: 1.5rem 2.5rem;
+  }
+}

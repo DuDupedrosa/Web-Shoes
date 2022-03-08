@@ -1,0 +1,9 @@
+/* global */
+@import url(./global/reset.css);
+@import url(./global/variable.css);
+@import url(./global/utility.css);
+
+/* home */
+@import url(./home/header.css);
+@import url(./home/produto.css);
+@import url(./home/footer.css);

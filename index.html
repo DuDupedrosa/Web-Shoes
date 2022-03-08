@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-Shoes</title>
+  <meta name="description" content="Venha conferir o melhor tênis esportivo">
+  <!-- metas-og -->
+  <meta property="og:title" content="Web-Shoes">
+  <meta property="og:description" content="Venha conferir o melhor tênis esportivo">
+  <meta property="og:type" content="WebSite">
+  <!-- fontx-externas / Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- <link rel="preload" href="./css/style.css" as="style"> -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="header-home">
+    <div class="container-main header-home-content">
+      <div class="header-img">
+        <a href="./index.html">
+          <img src="./img/icons/logo.svg" alt="" width="52" height="37">
+        </a>
+      </div>
+      <nav class="header-nav" aria-label="Navegação primária" data-menu>
+        <button class="menu-mobile-button" data-menu="button" aria-label="Botão que abre o menu da navegação"></button>
+        <ul class="nav-itens" data-menu="list">
+          <li><a href="./index.html" class="size-4 color-1 link-home">Home</a></li>
+          <li><a href="./index.html" class="size-4 color-1">Mulher</a></li>
+          <li><a href="./index.html" class="size-4 color-1">Homem</a></li>
+          <li><a href="./index.html" class="size-4 color-1">Criança</a></li>
+          <li><a href="./index.html" class="size-4 color-1">Customizar</a></li>
+        </ul>
+      </nav>
+      <form id="search-form">
+        <button class="search-button">
+          <img src="./img/icons/ícone-Lupa.svg" alt="ícone Lupa" width="24" height="24">
+        </button>
+        <div class="search-input">
+          <input type="search" name="q" id="search" placeholder="pesquisar">
+        </div>
+      </form>
+      <div class="header-img-bag">
+        <a href="./index.html">
+          <img src="./img/icons/ícone-Bag.svg" alt="ícone Bag" width="34" height="34">
+        </a>
+      </div>
+    </div>
+  </header>
+  <section class="produto" aria-label="Produto, tênis esportivo azul">
+    <div class="container-main produto-box">
+      <div class="container-produto-content produto-content">
+        <h1 class="color-1 size-6">Tênis Esportivo Para Corrida Top</h1>
+        <p class="size-1 color-2">
+          Esse tênis tem o intuito de te deixar ainda mais fitness, focado, e musculoso.
+        </p>
+        <span class="color-1 size-5">R$ 1.000,00</span>
+        <a href="./index.html" class="color-3 size-4">Comprar</a>
+      </div>
+      <div class="produtos-imgs">
+        <div class="produtos-imgs-ampliada">
+          <ul class="produos-imgs-max-itens">
+            <li data-photo="ampliada"><img src="./img/tenis-1-ampliado.png" alt="Tênis esportivo imagem um" width="605" height="520"></li>
+            <li data-photo="ampliada"><img src="./img/tenis-2-ampliado.png" alt="Tênis esportivo imagem dois" width="597" height="510"></li>
+            <li data-photo="ampliada"><img src="./img/tenis-4-ampliado.png" alt="Tênis esportivo imagem três" width="597" height="510"></li>
+          </ul>
+        </div>
+        <div class="produtos-imgs-min">
+          <ul class="produtos-imgs-min-itens">
+            <li data-photo="min"><img src="./img/tenis-1-min.png" alt="Tênis esportivo imagem um minimizada" width="250" height="184"></li>
+            <li data-photo="min"><img src="./img/tenis-2-min.png" alt="Tênis esportivo imagem dois minimizada" width="270" height="184"></li>
+            <li data-photo="min"><img src="./img/tenis-3-min.png" alt="Tênis esportivo imagem três minimizada" width="270" height="184"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-bg">
+    <div class="container-main footer-content">
+      <div class="footer-video">
+        <img src="./img/Vídeo.jpg" alt="">
+      </div>
+      <ul class="socials-links">
+        <li><a href="https://facebook.com" target="_blank" class="color-1 size-2">Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank" class="color-1 size-2">Instagram</a></li>
+        <li><a href="https://youtube.com/" target="_blank" class="color-1 size-2">Youtube</a></li>
+        <li><a href="https://twitter.com/" target="_blank" class="color-1 size-2">twitter</a></li>
+      </ul>
+      <div class="search-more background-6">
+        <a href="./index.html" class="color-3 size-4">Explore mais<span><img src="./img/icons/arrow.svg" alt="" width="24" height="24"></span></a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
