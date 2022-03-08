@@ -68,6 +68,7 @@
   font-size: var(--size-2);
   line-height: 1.16;
   border: 0.125rem solid transparent;
+  border-radius: 0px !important;
 }
 
 .search-input input:focus {
