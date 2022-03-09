@@ -2,6 +2,10 @@ body {
   font-family: var(--family-1);
 }
 
+#iframe-sneakers {
+  max-width: 100%;
+}
+
 .container-main {
   max-width: 82.5rem;
   margin: 0 auto;
