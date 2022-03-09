@@ -52,13 +52,12 @@
 
 #search-form {
   display: flex;
-  align-items: center;
 }
 
 .search-button {
   flex: 1;
   background-color: var(--background-1);
-  padding: 12.5px;
+  padding: 0 1.25rem;
   border: none;
   cursor: pointer;
 }
