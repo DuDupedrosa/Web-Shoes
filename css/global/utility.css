@@ -4,6 +4,7 @@ body {
 
 #iframe-sneakers {
   max-width: 100%;
+  height: auto;
 }
 
 .container-main {
